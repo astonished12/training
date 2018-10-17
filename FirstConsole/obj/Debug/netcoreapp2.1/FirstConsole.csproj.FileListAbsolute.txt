@@ -1,0 +1,11 @@
+C:\Users\EXNIntern1\Desktop\`training\FirstConsole\FirstConsole\bin\Debug\netcoreapp2.1\FirstConsole.deps.json
+C:\Users\EXNIntern1\Desktop\`training\FirstConsole\FirstConsole\bin\Debug\netcoreapp2.1\FirstConsole.runtimeconfig.json
+C:\Users\EXNIntern1\Desktop\`training\FirstConsole\FirstConsole\bin\Debug\netcoreapp2.1\FirstConsole.runtimeconfig.dev.json
+C:\Users\EXNIntern1\Desktop\`training\FirstConsole\FirstConsole\bin\Debug\netcoreapp2.1\FirstConsole.dll
+C:\Users\EXNIntern1\Desktop\`training\FirstConsole\FirstConsole\bin\Debug\netcoreapp2.1\FirstConsole.pdb
+C:\Users\EXNIntern1\Desktop\`training\FirstConsole\FirstConsole\obj\Debug\netcoreapp2.1\FirstConsole.csprojAssemblyReference.cache
+C:\Users\EXNIntern1\Desktop\`training\FirstConsole\FirstConsole\obj\Debug\netcoreapp2.1\FirstConsole.csproj.CoreCompileInputs.cache
+C:\Users\EXNIntern1\Desktop\`training\FirstConsole\FirstConsole\obj\Debug\netcoreapp2.1\FirstConsole.AssemblyInfoInputs.cache
+C:\Users\EXNIntern1\Desktop\`training\FirstConsole\FirstConsole\obj\Debug\netcoreapp2.1\FirstConsole.AssemblyInfo.cs
+C:\Users\EXNIntern1\Desktop\`training\FirstConsole\FirstConsole\obj\Debug\netcoreapp2.1\FirstConsole.dll
+C:\Users\EXNIntern1\Desktop\`training\FirstConsole\FirstConsole\obj\Debug\netcoreapp2.1\FirstConsole.pdb

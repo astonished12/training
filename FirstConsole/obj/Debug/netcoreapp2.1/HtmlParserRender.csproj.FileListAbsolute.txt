@@ -1,0 +1,10 @@
+C:\Users\EXNIntern1\Desktop\`training\FirstConsole\FirstConsole\bin\Debug\netcoreapp2.1\HtmlParserRender.deps.json
+C:\Users\EXNIntern1\Desktop\`training\FirstConsole\FirstConsole\bin\Debug\netcoreapp2.1\HtmlParserRender.runtimeconfig.json
+C:\Users\EXNIntern1\Desktop\`training\FirstConsole\FirstConsole\bin\Debug\netcoreapp2.1\HtmlParserRender.runtimeconfig.dev.json
+C:\Users\EXNIntern1\Desktop\`training\FirstConsole\FirstConsole\bin\Debug\netcoreapp2.1\HtmlParserRender.dll
+C:\Users\EXNIntern1\Desktop\`training\FirstConsole\FirstConsole\bin\Debug\netcoreapp2.1\HtmlParserRender.pdb
+C:\Users\EXNIntern1\Desktop\`training\FirstConsole\FirstConsole\obj\Debug\netcoreapp2.1\HtmlParserRender.csproj.CoreCompileInputs.cache
+C:\Users\EXNIntern1\Desktop\`training\FirstConsole\FirstConsole\obj\Debug\netcoreapp2.1\HtmlParserRender.AssemblyInfoInputs.cache
+C:\Users\EXNIntern1\Desktop\`training\FirstConsole\FirstConsole\obj\Debug\netcoreapp2.1\HtmlParserRender.AssemblyInfo.cs
+C:\Users\EXNIntern1\Desktop\`training\FirstConsole\FirstConsole\obj\Debug\netcoreapp2.1\HtmlParserRender.dll
+C:\Users\EXNIntern1\Desktop\`training\FirstConsole\FirstConsole\obj\Debug\netcoreapp2.1\HtmlParserRender.pdb
