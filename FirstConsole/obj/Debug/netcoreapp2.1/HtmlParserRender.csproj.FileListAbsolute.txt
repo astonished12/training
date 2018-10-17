@@ -8,3 +8,14 @@ C:\Users\EXNIntern1\Desktop\`training\FirstConsole\FirstConsole\obj\Debug\netcor
 C:\Users\EXNIntern1\Desktop\`training\FirstConsole\FirstConsole\obj\Debug\netcoreapp2.1\HtmlParserRender.AssemblyInfo.cs
 C:\Users\EXNIntern1\Desktop\`training\FirstConsole\FirstConsole\obj\Debug\netcoreapp2.1\HtmlParserRender.dll
 C:\Users\EXNIntern1\Desktop\`training\FirstConsole\FirstConsole\obj\Debug\netcoreapp2.1\HtmlParserRender.pdb
+D:\workspace\Personal-Projects\extra-internship\training\FirstConsole\bin\Debug\netcoreapp2.1\HtmlParserRender.deps.json
+D:\workspace\Personal-Projects\extra-internship\training\FirstConsole\bin\Debug\netcoreapp2.1\HtmlParserRender.runtimeconfig.json
+D:\workspace\Personal-Projects\extra-internship\training\FirstConsole\bin\Debug\netcoreapp2.1\HtmlParserRender.runtimeconfig.dev.json
+D:\workspace\Personal-Projects\extra-internship\training\FirstConsole\bin\Debug\netcoreapp2.1\HtmlParserRender.dll
+D:\workspace\Personal-Projects\extra-internship\training\FirstConsole\bin\Debug\netcoreapp2.1\HtmlParserRender.pdb
+D:\workspace\Personal-Projects\extra-internship\training\FirstConsole\obj\Debug\netcoreapp2.1\HtmlParserRender.csprojAssemblyReference.cache
+D:\workspace\Personal-Projects\extra-internship\training\FirstConsole\obj\Debug\netcoreapp2.1\HtmlParserRender.csproj.CoreCompileInputs.cache
+D:\workspace\Personal-Projects\extra-internship\training\FirstConsole\obj\Debug\netcoreapp2.1\HtmlParserRender.AssemblyInfoInputs.cache
+D:\workspace\Personal-Projects\extra-internship\training\FirstConsole\obj\Debug\netcoreapp2.1\HtmlParserRender.AssemblyInfo.cs
+D:\workspace\Personal-Projects\extra-internship\training\FirstConsole\obj\Debug\netcoreapp2.1\HtmlParserRender.dll
+D:\workspace\Personal-Projects\extra-internship\training\FirstConsole\obj\Debug\netcoreapp2.1\HtmlParserRender.pdb

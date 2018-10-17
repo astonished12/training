@@ -8,7 +8,12 @@ namespace HtmlParserRender.Render.Tags
     {
         public BodyTag() : base(TagType.body)
         {
+            
+        }
 
+        public override void AddChild(Element tag)
+        {
+            base.AddChild(tag);
         }
     }
 }

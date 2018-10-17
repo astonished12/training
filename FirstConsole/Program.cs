@@ -1,4 +1,5 @@
-﻿using HtmlParserRender.Render;
+﻿using HtmlParserRender.Exceptions;
+using HtmlParserRender.Render;
 using System;
 
 namespace HtmlParserRender
@@ -50,17 +51,34 @@ namespace HtmlParserRender
         static void ParserExample()
         {
             HtmlParser htmlParser = new HtmlParser();
-            //Tag tag = htmlParser.Parse("<html><head><title>Thetitle</title></head><body>Sunca<div id=\"11 mata\" id2=\"1x1\" id1=\"11\">Muculetz1<div>Muculetz</div></div></body></html>");
-            string text = System.IO.File.ReadAllText(Constants.filePath);
-            Tag tag = htmlParser.Parse(text);
+            Tag tag = htmlParser.Parse("<html><head><title>Thetitle</title></head><body>Sunca<div id=\"11 mata\" id2=\"1x1\" id1=\"11\">Muculetz1<div>Muculetz</div></div>End SUnca</body></html>");
+            //string text = System.IO.File.ReadAllText(Constants.filePath);
+            //Tag tag = htmlParser.Parse(text);
             tag.Render();
 
         }
 
+        static void TestException()
+        {
+            throw new InvalidTagException("acac");
+        }
         static void Main(string[] args)
         {
             //RenderExample();
             ParserExample();
+
+            try
+            {
+                TestException();
+            }
+            catch(InvalidTagException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+
+            }
         }
     }
 }

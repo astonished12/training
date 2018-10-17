@@ -74,7 +74,7 @@ namespace HtmlParserRender
         }
 
 
-        public void AddChild(Element tag)
+        public virtual void AddChild(Element tag)
         {
             Children.Add(tag);
         }

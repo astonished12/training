@@ -12,6 +12,11 @@ namespace HtmlParserRender
         body,
         div,
         p,
+        span,
+        h1,
+        h2,
+        h3,
+        h4,
         invalid
     }
 }
