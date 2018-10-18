@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using HtmlParserRender.Exceptions;
+using HtmlParserRender.Utils;
 
 namespace HtmlParserRender.Render.Tags
 {
@@ -8,12 +11,52 @@ namespace HtmlParserRender.Render.Tags
     {
         public BodyTag() : base(TagType.body)
         {
-            
+
         }
 
-        public override void AddChild(Element tag)
+        public override void AddChild(Element element)
         {
-            base.AddChild(tag);
+            Tag tag = element as Tag;
+            string tagType = tag.TagType.ToString();
+            if (tag != null)
+            {
+                switch (tag.TagType)
+                {
+                    case TagType.div:
+                        Children.Add(element);
+                        break;
+
+                    case TagType.p:
+                        Children.Add(element);
+                        break;
+
+                    case TagType.h1:
+                        Children.Add(element);
+                        break;
+
+
+                    case TagType.h2:
+                        Children.Add(element);
+                        break;
+
+
+                    case TagType.h3:
+                        Children.Add(element);
+                        break;
+
+
+                    case TagType.h4:
+                        Children.Add(element);
+                        break;
+
+                    default:
+                        throw new InvalidChildTypeException(tagType);
+                }
+            }
+            else
+            {
+                Children.Add(element);
+            }
         }
     }
 }

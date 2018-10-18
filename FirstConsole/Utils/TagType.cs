@@ -12,6 +12,7 @@ namespace HtmlParserRender
         body,
         div,
         p,
+        style,
         span,
         h1,
         h2,

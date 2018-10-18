@@ -10,5 +10,10 @@ namespace HtmlParserRender.Render.Tags
         {
 
         }
+
+        public override void AddChild(Element element)
+        {   
+            base.AddChild(element);
+        }
     }
 }

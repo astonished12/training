@@ -26,7 +26,7 @@ namespace HtmlParserRender.Render
                         bool isInList = Children.Any(Element => (Element as Tag).TagType == TagType.body);
                         bool hasHeadInFront = (Children.Last() as Tag).TagType == TagType.head;
                         if (isInList) throw new DuplicateTagException(tagType);
-                        if(hasHeadInFront) throw new InvalidSyntax(ExceptionMessage.InvalidSyntaxBodyAfterHead);
+                        if(!hasHeadInFront) throw new InvalidSyntax(ExceptionMessage.InvalidSyntaxBodyAfterHead);
                         Children.Add(element);
                         break;
 

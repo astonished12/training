@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using HtmlParserRender.Utils;
 
 namespace HtmlParserRender.Render.Tags
 {
@@ -27,7 +28,7 @@ namespace HtmlParserRender.Render.Tags
                         break;
 
                     default:
-                        throw new InvalidSyntax("Invalid syntax in head content");
+                        throw new InvalidSyntax(ExceptionMessage.InvalidSyntaxHeadElement);
                 }
             }
 

@@ -10,7 +10,7 @@ namespace HtmlParserRender
 {
     public class HtmlParser
     {
-        private Regex regex = new Regex(@"[a-zA-Z0-9-_]+=['""][a-zA-Z0-9-_#* ]*[""']");
+        private Regex regex = new Regex(@"[a-zA-Z0-9-_]+=['""]*[a-zA-Z0-9-_#*:{}/\ ]*[""']*");
 
         public HtmlParser() { }
 
