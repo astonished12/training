@@ -17,6 +17,8 @@ namespace HtmlParserRender
         h2,
         h3,
         h4,
+        hr,
+        br,
         invalid
     }
 }

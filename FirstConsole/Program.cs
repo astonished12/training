@@ -99,23 +99,7 @@ namespace HtmlParserRender
         static void Main(string[] args)
         {
             //RenderExample();
-
-            /* ParserExample();
-
-             try
-             {
-                 TestException();
-             }
-             catch(InvalidTagException ex)
-             {
-                 Console.WriteLine(ex.Message);
-             }
-             finally
-             {
-
-             }*/
-
-            TestException();
+            ParserExample();
         }
     }
 }

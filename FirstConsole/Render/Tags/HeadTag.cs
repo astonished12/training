@@ -30,10 +30,6 @@ namespace HtmlParserRender.Render.Tags
                         throw new InvalidSyntax("Invalid syntax in head content");
                 }
             }
-            else
-            {
-                Children.Add(element);
-            }
 
         }
     }

@@ -19,7 +19,7 @@ namespace HtmlParserRender.Tests
         }
 
         [TestMethod]
-        public void TestMethod1()
+        public void TestRenderMethods()
         {
             Assert.ThrowsException<DuplicateTagException>(() => DoubleHeadInHtml());
         }
