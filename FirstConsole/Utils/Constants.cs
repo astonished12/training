@@ -15,8 +15,8 @@ namespace HtmlParserRender
         public const string RightDiamondNewLine = ">\n";
         public const string ClosedLeftDiamond = "</";
         public const char NewLine = '\n';
-        public const string filePath = @"C:\Users\EXNIntern1\Desktop\training\training\FirstConsole\output.html";
-        //public const string filePath = @"D:\workspace\Personal-Projects\extra-internship\training\FirstConsole\output.html";
+        //public const string filePath = @"C:\Users\EXNIntern1\Desktop\training\training\FirstConsole\output.html";
+        public const string filePath = @"D:\workspace\Personal-Projects\extra-internship\training\FirstConsole\output.html";
         public const char Slash = '/';
         public const string EmptyString = "";
         public const string SyntaxException = "Invalid syntax";

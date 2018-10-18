@@ -9,7 +9,7 @@ namespace HtmlParserRender.Render
         public string Content { get; set; }
         public virtual string GenerateHtml(int indentLevel)
         {
-            return (new String(Constants.Space, (indentLevel + 1) * Constants.IdentSize) + Content + Constants.NewLine);
+            return new String(Constants.Space, (indentLevel + 1) * Constants.IdentSize) + Content + Constants.NewLine;
         }
     }
 }

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using HtmlParserRender.Utils;
 
 namespace HtmlParserRender.Render.Tags
 {
@@ -18,19 +19,7 @@ namespace HtmlParserRender.Render.Tags
             Tag tag = element as Tag;
             if (tag != null)
             {
-                /*switch (tag.TagType)
-                {
-                    case TagType.title:
-                        bool isInList = Children.Any(Element => (Element as Tag).TagType == TagType.title);
-                        if (isInList) throw new DuplicateTagException(tag.TagType.ToString());
-                        Children.Add(element);
-                        break;
-
-                    default:
-                        throw new InvalidSyntax("Invalid syntax in title content");
-                }*/
-                throw new InvalidSyntax("Invalid syntax in title content");
-
+                throw new InvalidSyntax(ExceptionMessage.InvalidSyntaxTitleElement);
             }
             else
             {
