@@ -10,7 +10,7 @@ namespace HtmlParserRender
     {
         private TagType Type { get; set; }
         private Dictionary<string, string> Attributes { get; set; }
-        private List<Element> Children { get; set; }
+        public List<Element> Children { get; private set; }
 
         private Tag() { }
 
@@ -74,9 +74,9 @@ namespace HtmlParserRender
         }
 
 
-        public virtual void AddChild(Element tag)
+        public virtual void AddChild(Element element)
         {
-            Children.Add(tag);
+            Children.Add(element);
         }
 
         public void AddAttribute(string attributeKey, string attributeValue)

@@ -1,5 +1,6 @@
 ﻿using HtmlParserRender.Exceptions;
 using HtmlParserRender.Render;
+using HtmlParserRender.Render.Tags;
 using System;
 
 namespace HtmlParserRender
@@ -34,7 +35,7 @@ namespace HtmlParserRender
 
             body.AddChild(div);
 
-            div.AddChild(div1);            
+            div.AddChild(div1);
             div.AddAttribute("id", "1");
             div.AddAttribute("class", ".class1");
             div.AddChild(divContent);
@@ -51,27 +52,41 @@ namespace HtmlParserRender
         static void ParserExample()
         {
             HtmlParser htmlParser = new HtmlParser();
-            Tag tag = htmlParser.Parse("<html><head><title>Thetitle</title></head><body>Sunca<div id=\"11 mata\" id2=\"1x1\" id1=\"11\">Muculetz1<div>Muculetz</div></div>End SUnca</body></html>");
-            //string text = System.IO.File.ReadAllText(Constants.filePath);
-            //Tag tag = htmlParser.Parse(text);
+            //Tag tag = htmlParser.Parse("<html><head><title>Thetitle</title></head><body>Sunca<div id=\"11 mata\" id2=\"1x1\" id1=\"11\">Muculetz1<div>Muculetz</div></div>End SUnca</body></html>");
+            string text = System.IO.File.ReadAllText(Constants.filePath);
+            Tag tag = htmlParser.Parse(text);
             tag.Render();
 
         }
 
         static void TestException()
         {
-            throw new InvalidTagException("acac");
-        }
-        static void Main(string[] args)
-        {
-            //RenderExample();
-            ParserExample();
-
             try
             {
-                TestException();
+                HtmlTag html = new HtmlTag();
+                HeadTag head = new HeadTag();
+                BodyTag body = new BodyTag();
+                TitleTag title = new TitleTag();
+
+                Element titleContent = new Element() { Content = "The title" };
+
+                html.AddChild(head);
+                html.AddChild(body);
+
+                head.AddChild(title);
+                title.AddChild(titleContent);
+
+                html.Render();
             }
-            catch(InvalidTagException ex)
+            catch (InvalidSyntax ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (InvalidTagException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (DuplicateTagException ex)
             {
                 Console.WriteLine(ex.Message);
             }
@@ -79,6 +94,28 @@ namespace HtmlParserRender
             {
 
             }
+        }
+
+        static void Main(string[] args)
+        {
+            //RenderExample();
+
+            /* ParserExample();
+
+             try
+             {
+                 TestException();
+             }
+             catch(InvalidTagException ex)
+             {
+                 Console.WriteLine(ex.Message);
+             }
+             finally
+             {
+
+             }*/
+
+            TestException();
         }
     }
 }

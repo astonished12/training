@@ -19,3 +19,14 @@ D:\workspace\Personal-Projects\extra-internship\training\FirstConsole\obj\Debug\
 D:\workspace\Personal-Projects\extra-internship\training\FirstConsole\obj\Debug\netcoreapp2.1\HtmlParserRender.AssemblyInfo.cs
 D:\workspace\Personal-Projects\extra-internship\training\FirstConsole\obj\Debug\netcoreapp2.1\HtmlParserRender.dll
 D:\workspace\Personal-Projects\extra-internship\training\FirstConsole\obj\Debug\netcoreapp2.1\HtmlParserRender.pdb
+C:\Users\EXNIntern1\Desktop\training\training\FirstConsole\bin\Debug\netcoreapp2.1\HtmlParserRender.deps.json
+C:\Users\EXNIntern1\Desktop\training\training\FirstConsole\bin\Debug\netcoreapp2.1\HtmlParserRender.runtimeconfig.json
+C:\Users\EXNIntern1\Desktop\training\training\FirstConsole\bin\Debug\netcoreapp2.1\HtmlParserRender.runtimeconfig.dev.json
+C:\Users\EXNIntern1\Desktop\training\training\FirstConsole\bin\Debug\netcoreapp2.1\HtmlParserRender.dll
+C:\Users\EXNIntern1\Desktop\training\training\FirstConsole\bin\Debug\netcoreapp2.1\HtmlParserRender.pdb
+C:\Users\EXNIntern1\Desktop\training\training\FirstConsole\obj\Debug\netcoreapp2.1\HtmlParserRender.csprojAssemblyReference.cache
+C:\Users\EXNIntern1\Desktop\training\training\FirstConsole\obj\Debug\netcoreapp2.1\HtmlParserRender.csproj.CoreCompileInputs.cache
+C:\Users\EXNIntern1\Desktop\training\training\FirstConsole\obj\Debug\netcoreapp2.1\HtmlParserRender.AssemblyInfoInputs.cache
+C:\Users\EXNIntern1\Desktop\training\training\FirstConsole\obj\Debug\netcoreapp2.1\HtmlParserRender.AssemblyInfo.cs
+C:\Users\EXNIntern1\Desktop\training\training\FirstConsole\obj\Debug\netcoreapp2.1\HtmlParserRender.dll
+C:\Users\EXNIntern1\Desktop\training\training\FirstConsole\obj\Debug\netcoreapp2.1\HtmlParserRender.pdb

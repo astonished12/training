@@ -10,28 +10,21 @@ namespace HtmlParserRender
 {
     public class HtmlParser
     {
-        private Regex regex = new Regex(@"[a-zA-Z0-9-_]+=['""][a-zA-Z0-9-_ ]*[""']");
+        private Regex regex = new Regex(@"[a-zA-Z0-9-_]+=['""][a-zA-Z0-9-_#* ]*[""']");
 
-        public HtmlParser()
-        {
-
-        }
+        public HtmlParser() { }
 
         private bool IsClosedTag(string tag)
         {
             return tag[1] == Constants.Slash;
         }
 
-
         private Dictionary<string, string> GetAttributesFromTagData(string attributesData)
         {
             string[] tagData = attributesData.Split(Constants.Space, 2);
-
-
             Dictionary<string, string> attrs = new Dictionary<string, string>();
 
             MatchCollection attributesCatchedCollection = regex.Matches(attributesData);
-
             foreach (Match match in attributesCatchedCollection)
             {
                 string[] pairData = match.Value.Split(Constants.Equal);
@@ -43,17 +36,13 @@ namespace HtmlParserRender
 
         private bool CheckAttributes(string attributesData)
         {
-
             MatchCollection attributesCatchedCollection = regex.Matches(attributesData);
-
             return attributesCatchedCollection.Count > 0;
-
         }
 
         private string GetTagTypeFromString(string data)
         {
             string[] tagData = data.Split(Constants.Space, 2);
-
             if (tagData.Length > 1)
             {
                 if (CheckAttributes(tagData[1]) == false) throw new Exception("invalid sytnax");
@@ -117,7 +106,6 @@ namespace HtmlParserRender
                             break;
 
                         case Constants.RightDiamond:
-                            //to do cehck 
                             string tag = GetTagTypeFromString(tagBuilder.ToString());
                             if (IsValidTag(tag))
                             {
@@ -181,8 +169,6 @@ namespace HtmlParserRender
                         stackHtmlParser.Push(currentTag);
                     }
                 }
-
-
             }
 
             if (stackHtmlParser.Count > 0) throw new Exception(Constants.SyntaxException);

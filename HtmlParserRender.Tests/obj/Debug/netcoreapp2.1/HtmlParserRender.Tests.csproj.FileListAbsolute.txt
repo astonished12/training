@@ -1,0 +1,17 @@
+C:\Users\EXNIntern1\Desktop\training\training\HtmlParserRender.Tests\obj\Debug\netcoreapp2.1\HtmlParserRender.Tests.csprojAssemblyReference.cache
+C:\Users\EXNIntern1\Desktop\training\training\HtmlParserRender.Tests\obj\Debug\netcoreapp2.1\HtmlParserRender.Tests.csproj.CoreCompileInputs.cache
+C:\Users\EXNIntern1\Desktop\training\training\HtmlParserRender.Tests\obj\Debug\netcoreapp2.1\HtmlParserRender.Tests.AssemblyInfoInputs.cache
+C:\Users\EXNIntern1\Desktop\training\training\HtmlParserRender.Tests\obj\Debug\netcoreapp2.1\HtmlParserRender.Tests.AssemblyInfo.cs
+C:\Users\EXNIntern1\Desktop\training\training\HtmlParserRender.Tests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\EXNIntern1\Desktop\training\training\HtmlParserRender.Tests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\EXNIntern1\Desktop\training\training\HtmlParserRender.Tests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\EXNIntern1\Desktop\training\training\HtmlParserRender.Tests\bin\Debug\netcoreapp2.1\HtmlParserRender.Tests.deps.json
+C:\Users\EXNIntern1\Desktop\training\training\HtmlParserRender.Tests\bin\Debug\netcoreapp2.1\HtmlParserRender.Tests.runtimeconfig.json
+C:\Users\EXNIntern1\Desktop\training\training\HtmlParserRender.Tests\bin\Debug\netcoreapp2.1\HtmlParserRender.Tests.runtimeconfig.dev.json
+C:\Users\EXNIntern1\Desktop\training\training\HtmlParserRender.Tests\bin\Debug\netcoreapp2.1\HtmlParserRender.Tests.dll
+C:\Users\EXNIntern1\Desktop\training\training\HtmlParserRender.Tests\bin\Debug\netcoreapp2.1\HtmlParserRender.Tests.pdb
+C:\Users\EXNIntern1\Desktop\training\training\HtmlParserRender.Tests\bin\Debug\netcoreapp2.1\HtmlParserRender.dll
+C:\Users\EXNIntern1\Desktop\training\training\HtmlParserRender.Tests\bin\Debug\netcoreapp2.1\HtmlParserRender.pdb
+C:\Users\EXNIntern1\Desktop\training\training\HtmlParserRender.Tests\obj\Debug\netcoreapp2.1\HtmlParserRender.Tests.csproj.CopyComplete
+C:\Users\EXNIntern1\Desktop\training\training\HtmlParserRender.Tests\obj\Debug\netcoreapp2.1\HtmlParserRender.Tests.dll
+C:\Users\EXNIntern1\Desktop\training\training\HtmlParserRender.Tests\obj\Debug\netcoreapp2.1\HtmlParserRender.Tests.pdb
