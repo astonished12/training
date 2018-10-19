@@ -17,9 +17,9 @@ namespace HtmlParserRender.Render.Tags
         public override void AddChild(Element element)
         {
             Tag tag = element as Tag;
-            string tagType = tag.TagType.ToString();
             if (tag != null)
             {
+                string tagType = tag.TagType.ToString();
                 switch (tag.TagType)
                 {
                     case TagType.div:

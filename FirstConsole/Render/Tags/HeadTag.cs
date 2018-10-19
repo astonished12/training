@@ -19,16 +19,23 @@ namespace HtmlParserRender.Render.Tags
             Tag tag = element as Tag;
             if (tag != null)
             {
+                bool isInList;
                 switch (tag.TagType)
                 {
                     case TagType.title:
-                        bool isInList = Children.Any(Element => (Element as Tag).TagType == TagType.title);
+                        isInList = Children.Any(Element => (Element as Tag).TagType == TagType.title);
+                        if (isInList) throw new DuplicateTagException(tag.TagType.ToString());
+                        Children.Add(element);
+                        break;
+
+                    case TagType.style:
+                        isInList = Children.Any(Element => (Element as Tag).TagType == TagType.style);
                         if (isInList) throw new DuplicateTagException(tag.TagType.ToString());
                         Children.Add(element);
                         break;
 
                     default:
-                        throw new InvalidSyntax(ExceptionMessage.InvalidSyntaxHeadElement);
+                        throw new InvalidChildTypeException(string.Format(ExceptionMessage.InvalidSyntaxInChild + " at element {0}", tag.TagType.ToString()));
                 }
             }
 

@@ -19,7 +19,7 @@ namespace HtmlParserRender.Render.Tags
             Tag tag = element as Tag;
             if (tag != null)
             {
-                throw new InvalidSyntax(ExceptionMessage.InvalidSyntaxTitleElement);
+                throw new InvalidChildTypeException(string.Format(ExceptionMessage.InvalidSyntaxInChild + " at element {0}", tag.TagType.ToString()));
             }
             else
             {

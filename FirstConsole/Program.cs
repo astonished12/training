@@ -26,16 +26,46 @@ namespace HtmlParserRender
                 HeadTag head = new HeadTag();
                 BodyTag body = new BodyTag();
                 TitleTag title = new TitleTag();
+                StyleTag style = new StyleTag();
+                H1Tag h1Tag = new H1Tag();
+                PTag pTag1 = new PTag();
+                H2Tag h2Tag = new H2Tag();
+                PTag pTag2 = new PTag();
+
 
                 Element titleContent = new Element() { Content = "The title" };
+                Element styleContent = new Element() { Content = " p{             color: white;             background-color: 009900;             width: 400px;         }         h1         {             color: white;             background-color: 009900;             width: 400px;         }         h2         {             color: white;             background-color: 009900;             width: 400px;         } " };
+                Element h1Content = new Element() { Content = "GeeksforGeeks" };
+                Element p1Content = new Element() { Content = "How many times were you frustrated while looking out     for a good collection of programming/algorithm/interview     questions? What did you expect and what did you get?     This portal has been created to provide well written,     well thought and well-explained solutions for selected questions. " };
+                Element h2Content = new Element() { Content = "GeeksForGeeks" };
+                Element p2Content = new Element() { Content = "GCET is an entrance test for the extensive classroom programme     by GeeksforGeeks to build and enhance Data Structures and Algorithm     concepts, mentored by Sandeep Jain (Founder & CEO, GeeksforGeeks).     He has 7 years of teaching experience and 6 years of industry experience. " };
+                Element bodyContent1 = new Element() { Content = "hello from body 1" };
+                Element bodyContent2 = new Element() { Content = "hello from body 2" };
+                Element bodyContent3 = new Element() { Content = "hello from body 3" };
+
 
                 html.AddChild(head);
                 html.AddChild(body);
 
                 head.AddChild(title);
-                title.AddChild(titleContent);
+                head.AddChild(style);
 
-                html.Render();
+                body.AddChild(bodyContent1);
+                body.AddChild(h1Tag);
+                body.AddChild(bodyContent2);
+                body.AddChild(pTag1);
+                body.AddChild(h2Tag);
+                body.AddChild(pTag2);
+                body.AddChild(bodyContent3);
+
+                title.AddChild(titleContent);
+                style.AddChild(styleContent);
+                h1Tag.AddChild(h1Content);
+                pTag1.AddChild(p1Content);
+                h2Tag.AddChild(h2Content);
+                pTag2.AddChild(p2Content);
+
+                html.Render(Constants.filePath);
             }
             catch (InvalidSyntax ex)
             {

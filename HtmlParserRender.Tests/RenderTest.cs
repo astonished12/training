@@ -25,11 +25,10 @@ namespace HtmlParserRender.Tests
         }
 
         [TestMethod]
-        public void TestRenderMethods()
+        public void TestRenderHeadExceptions()
         {
             Assert.ThrowsException<DuplicateTagException>(() => DoubleHeadInHtml());
-            InvalidSyntax ex = Assert.ThrowsException<InvalidSyntax>(() => TitleContentIsElement());
-            Assert.AreEqual(ExceptionMessage.InvalidSyntaxTitleElement,ex.Message);
+            InvalidChildTypeException ex = Assert.ThrowsException<InvalidChildTypeException>(() => TitleContentIsElement());
         }
     }
 }

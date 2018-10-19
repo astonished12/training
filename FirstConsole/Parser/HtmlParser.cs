@@ -10,7 +10,7 @@ namespace HtmlParserRender
 {
     public class HtmlParser
     {
-        private Regex regex = new Regex(@"[a-zA-Z0-9-_]+=['""]*[a-zA-Z0-9-_#*:{}/\ ]*[""']*");
+        private Regex regex = new Regex(Constants.AttributesTagRegex);
 
         public HtmlParser() { }
 
@@ -66,20 +66,13 @@ namespace HtmlParserRender
             return result != null;
         }
 
-        private void CheckExecption(NodeInfo nodeInfo, Tag peek)
+        private Tag CreateTag(string tagType)
         {
-            if (nodeInfo.Type is TagType.invalid)
-                throw new Exception(Constants.SyntaxException);
+            tagType = Constants.NameSpacesTags + tagType.Substring(0, 1).ToUpper() + tagType.Substring(1).ToLower() + Constants.Tag;
+            Type tempType = Type.GetType(tagType);
+            Tag result = Activator.CreateInstance(tempType) as Tag;
 
-            if (!nodeInfo.TagIsClosed && nodeInfo.Type == peek.TagType && nodeInfo.Type != TagType.div)
-            {
-                throw new Exception(Constants.SyntaxException);
-            }
-            else if (nodeInfo.TagIsClosed && nodeInfo.Type != peek.TagType)
-            {
-                throw new Exception(Constants.SyntaxException);
-            }
-
+            return result;
         }
 
         private NodeInfo FindNextTag(string currentDoc, ref int position)
@@ -138,16 +131,14 @@ namespace HtmlParserRender
 
             if (nodeInfo.TagIsClosed) throw new Exception(Constants.SyntaxException);
 
-            root = new Tag(nodeInfo.Type);
+            root = CreateTag(nodeInfo.Type.ToString());
             stackHtmlParser.Push(root);
 
             while (stackHtmlParser.Count > 0 && currentPostion < document.Length)
             {
                 nodeInfo = FindNextTag(document, ref currentPostion);
-                Tag currentTag = new Tag(nodeInfo.Type);
+                Tag currentTag = CreateTag(nodeInfo.Type.ToString());
                 nodeInfo.Attributes.ToList().ForEach(item => currentTag.AddAttribute(item.Key, item.Value));
-
-                CheckExecption(nodeInfo, stackHtmlParser.Peek());
 
                 if (nodeInfo.TagIsClosed && (nodeInfo.Type == stackHtmlParser.Peek().TagType))
                 {
@@ -156,18 +147,15 @@ namespace HtmlParserRender
                     stackHtmlParser.Pop();
                 }
 
-                if (stackHtmlParser.Count > 0)
+                if (stackHtmlParser.Count > 0 && !nodeInfo.TagIsClosed)
                 {
-                    if (!nodeInfo.TagIsClosed)
+                    if (nodeInfo.ParentContent.Content.Length > 0)
                     {
-                        if (nodeInfo.ParentContent.Content.Length > 0)
-                        {
-                            stackHtmlParser.Peek().AddChild(nodeInfo.ParentContent);
-                        }
-
-                        stackHtmlParser.Peek().AddChild(currentTag);
-                        stackHtmlParser.Push(currentTag);
+                        stackHtmlParser.Peek().AddChild(nodeInfo.ParentContent);
                     }
+
+                    stackHtmlParser.Peek().AddChild(currentTag);
+                    stackHtmlParser.Push(currentTag);
                 }
             }
 

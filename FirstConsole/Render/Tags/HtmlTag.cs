@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using HtmlParserRender.Utils;
 
-namespace HtmlParserRender.Render
+namespace HtmlParserRender.Render.Tags
 {
     public class HtmlTag : Tag
     {
