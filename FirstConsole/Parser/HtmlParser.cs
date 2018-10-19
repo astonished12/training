@@ -100,6 +100,10 @@ namespace HtmlParserRender
 
                         case Constants.RightDiamond:
                             string tag = GetTagTypeFromString(tagBuilder.ToString());
+                            //if (tag[tag.Length - 1] == Constants.Slash)
+                            //{
+                            //    tag = tag.Substring(0, tag.Length - 1);
+                            //}
                             if (IsValidTag(tag))
                             {
                                 TagType type = (TagType)Enum.Parse(typeof(TagType), tag);
@@ -118,7 +122,6 @@ namespace HtmlParserRender
 
             return null;
         }
-
 
         public Tag Parse(string document)
         {
@@ -139,7 +142,7 @@ namespace HtmlParserRender
                 nodeInfo = FindNextTag(document, ref currentPostion);
                 Tag currentTag = CreateTag(nodeInfo.Type.ToString());
                 nodeInfo.Attributes.ToList().ForEach(item => currentTag.AddAttribute(item.Key, item.Value));
-
+                
                 if (nodeInfo.TagIsClosed && (nodeInfo.Type == stackHtmlParser.Peek().TagType))
                 {
                     if (nodeInfo.ParentContent.Content.Length > 0)
@@ -155,7 +158,8 @@ namespace HtmlParserRender
                     }
 
                     stackHtmlParser.Peek().AddChild(currentTag);
-                    stackHtmlParser.Push(currentTag);
+                    if(!currentTag.IsSelfClosing)
+                        stackHtmlParser.Push(currentTag);
                 }
             }
 

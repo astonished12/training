@@ -20,6 +20,7 @@ namespace HtmlParserRender
         h4,
         hr,
         br,
-        invalid
+        meta,
+        input
     }
 }

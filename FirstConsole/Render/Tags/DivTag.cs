@@ -9,7 +9,7 @@ namespace HtmlParserRender.Render.Tags
 {
     public class DivTag : Tag
     {
-        public DivTag() : base(TagType.body)
+        public DivTag() : base(TagType.div)
         {
 
         }
@@ -22,25 +22,13 @@ namespace HtmlParserRender.Render.Tags
                 switch (tag.TagType)
                 {
                     case TagType.div:
-                        Children.Add(element);
-                        break;
-
                     case TagType.p:
-                        Children.Add(element);
-                        break;
-
                     case TagType.h1:
-                        Children.Add(element);
-                        break;
-
                     case TagType.h2:
-                        Children.Add(element);
-                        break;
                     case TagType.h3:
-                        Children.Add(element);
-                        break;
-
                     case TagType.h4:
+                    case TagType.input:
+                    case TagType.span:
                         Children.Add(element);
                         break;
 

@@ -8,17 +8,16 @@ namespace HtmlParserRender
     class Program
     {
         
-        static void ParserExample()
+        static Tag ParserExample()
         {
             HtmlParser htmlParser = new HtmlParser();
             //Tag tag = htmlParser.Parse("<html><head><title>Thetitle</title></head><body>Sunca<div id=\"11 mata\" id2=\"1x1\" id1=\"11\">Muculetz1<div>Muculetz</div></div>End SUnca</body></html>");
             string text = System.IO.File.ReadAllText(Constants.filePath);
             Tag tag = htmlParser.Parse(text);
-            tag.Render();
-
+            return tag;
         }
 
-        static void RenderExample()
+        /*static void RenderExample()
         {
             try
             {
@@ -26,12 +25,17 @@ namespace HtmlParserRender
                 HeadTag head = new HeadTag();
                 BodyTag body = new BodyTag();
                 TitleTag title = new TitleTag();
+                MetaTag meta = new MetaTag();
                 StyleTag style = new StyleTag();
                 H1Tag h1Tag = new H1Tag();
                 PTag pTag1 = new PTag();
                 H2Tag h2Tag = new H2Tag();
                 PTag pTag2 = new PTag();
-
+                DivTag divTag1 = new DivTag();
+                DivTag divTag2 = new DivTag();
+                DivTag divTag3 = new DivTag();
+                SpanTag spanTag = new SpanTag();
+            
 
                 Element titleContent = new Element() { Content = "The title" };
                 Element styleContent = new Element() { Content = " p{             color: white;             background-color: 009900;             width: 400px;         }         h1         {             color: white;             background-color: 009900;             width: 400px;         }         h2         {             color: white;             background-color: 009900;             width: 400px;         } " };
@@ -48,15 +52,25 @@ namespace HtmlParserRender
                 html.AddChild(body);
 
                 head.AddChild(title);
+                head.AddChild(meta);
                 head.AddChild(style);
+
+
+                body.AddAttribute("class", ".class1");
 
                 body.AddChild(bodyContent1);
                 body.AddChild(h1Tag);
+                body.AddChild(divTag1);
+                body.AddChild(divTag3);
                 body.AddChild(bodyContent2);
                 body.AddChild(pTag1);
                 body.AddChild(h2Tag);
                 body.AddChild(pTag2);
                 body.AddChild(bodyContent3);
+
+                divTag1.AddChild(divTag2);
+                divTag1.AddChild(spanTag);
+
 
                 title.AddChild(titleContent);
                 style.AddChild(styleContent);
@@ -65,6 +79,7 @@ namespace HtmlParserRender
                 h2Tag.AddChild(h2Content);
                 pTag2.AddChild(p2Content);
 
+                //html.Render();
                 html.Render(Constants.filePath);
             }
             catch (InvalidSyntax ex)
@@ -84,11 +99,12 @@ namespace HtmlParserRender
 
             }
         }
+        */
 
         static void Main(string[] args)
         {
-            //RenderExample();
-            ParserExample();
+            Tag root = ParserExample();
+            root.Render();
         }
     }
 }

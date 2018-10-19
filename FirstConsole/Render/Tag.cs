@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HtmlParserRender
+namespace HtmlParserRender.Render
 {
     public class Tag : Element
     {
         private TagType Type { get; set; }
         private Dictionary<string, string> Attributes { get; set; }
         public List<Element> Children { get; private set; }
+        public bool IsSelfClosing { get; protected set; }
 
         private Tag() { }
 
@@ -32,7 +33,6 @@ namespace HtmlParserRender
             StringBuilder htmlBuilder = new StringBuilder();
             htmlBuilder.Append(GetOpenTagString(indentLevel));
 
-
             if (Attributes.Count > 0)
             {
                 htmlBuilder.Append(Constants.Space);
@@ -44,8 +44,9 @@ namespace HtmlParserRender
                 }
             }
 
+
             htmlBuilder.Append(Constants.RightDiamondNewLine);
-            
+
 
             if (Children.Count > 0)
             {
@@ -57,7 +58,7 @@ namespace HtmlParserRender
             }
             else
             {
-                htmlBuilder.Append(GetClosedTagString(indentLevel));
+                if (!IsSelfClosing) htmlBuilder.Append(GetClosedTagString(indentLevel));
             }
 
             return htmlBuilder.ToString();

@@ -23,32 +23,14 @@ namespace HtmlParserRender.Render.Tags
                 switch (tag.TagType)
                 {
                     case TagType.div:
-                        Children.Add(element);
-                        break;
-
                     case TagType.p:
-                        Children.Add(element);
-                        break;
-
                     case TagType.h1:
-                        Children.Add(element);
-                        break;
-
-
                     case TagType.h2:
-                        Children.Add(element);
-                        break;
-
-
                     case TagType.h3:
-                        Children.Add(element);
-                        break;
-
-
                     case TagType.h4:
+                    case TagType.span:
                         Children.Add(element);
                         break;
-
                     default:
                         throw new InvalidChildTypeException(tagType);
                 }
