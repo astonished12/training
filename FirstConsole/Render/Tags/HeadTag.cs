@@ -22,7 +22,6 @@ namespace HtmlParserRender.Render.Tags
                 bool isInList;
                 switch (tag.TagType)
                 {
-
                     case TagType.style:
                     case TagType.meta:
                         Children.Add(element);

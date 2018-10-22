@@ -9,39 +9,80 @@ namespace HtmlParserRender.Tests
     [TestClass]
     public class RenderTest
     {
-        private readonly HtmlTag _html = new HtmlTag();
-        private readonly HeadTag _head = new HeadTag();
-        private readonly TitleTag _title = new TitleTag();     
-        private readonly BodyTag _body = new BodyTag();
-        private readonly MetaTag _meta = new MetaTag();
-        private readonly StyleTag _style = new StyleTag();
-        private readonly H1Tag _h1Tag = new H1Tag();
-        private readonly PTag _pTag = new PTag();
-        private readonly H2Tag _h2Tag = new H2Tag();
-        private readonly DivTag _divTag = new DivTag();
-        private readonly SpanTag _spanTag = new SpanTag();
+        private  HtmlTag _html = new HtmlTag();
+        private  HeadTag _head = new HeadTag();
+        private  TitleTag _title = new TitleTag();     
+        private  BodyTag _body = new BodyTag();
+        private  MetaTag _meta = new MetaTag();
+        private  StyleTag _style = new StyleTag();
+        private  H1Tag _h1Tag = new H1Tag();
+        private  PTag _pTag = new PTag();
+        private  H2Tag _h2Tag = new H2Tag();
+        private  DivTag _divTag = new DivTag();
+        private  SpanTag _spanTag = new SpanTag();
+
+
+        private void CreateSUTobjects()
+        {
+           _html = new HtmlTag();
+           _head = new HeadTag();
+           _title = new TitleTag();
+           _body = new BodyTag();
+           _meta = new MetaTag();
+          _style = new StyleTag();
+          _h1Tag = new H1Tag();
+          _pTag = new PTag();
+         _h2Tag = new H2Tag();
+         _divTag = new DivTag();
+         _spanTag = new SpanTag();
+    }
+
 
         private void DoubleHeadInHtmlCase()
         {
+            CreateSUTobjects();
             _html.AddChild(_head);
             _html.AddChild(_head);
         }
-        private void HtmlContainsOnlyHeadAndBody()
+        private void DoubleTItleInHeadCase()
         {
-            _html.AddChild(_h1Tag);
+            CreateSUTobjects();
+            _head.AddChild(_title);
+            _head.AddChild(_title);
         }
 
+        private void HtmlContainsOnlyHeadAndBody()
+        {
+            CreateSUTobjects();
+            _html.AddChild(_h1Tag);
+        }
+        private void HeadContainsOnlyTitleStyleMeta()
+        {
+            CreateSUTobjects();
+            _head.AddChild(_title);
+            _head.AddChild(_meta);
+            _head.AddChild(_style);
+
+            _head.AddChild(_h1Tag);
+        }
         private void TitleContentIsElement()
         {
             _title.AddChild(_head);
         }
 
         [TestMethod]
-        public void TestRenderHeadExceptions()
+        public void TestRenderHtmlExceptions()
         {
+            CreateSUTobjects();
             Assert.ThrowsException<DuplicateTagException>(() => DoubleHeadInHtmlCase());
             InvalidChildTypeException ex = Assert.ThrowsException<InvalidChildTypeException>(() => HtmlContainsOnlyHeadAndBody());
+        }
 
+        [TestMethod]
+        public void TestRenderHeadExceptions()
+        {
+            Assert.ThrowsException<DuplicateTagException>(() => DoubleTItleInHeadCase());
+            InvalidChildTypeException ex = Assert.ThrowsException<InvalidChildTypeException>(() => HeadContainsOnlyTitleStyleMeta()); 
         }
     }
 }

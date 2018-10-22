@@ -36,6 +36,10 @@ namespace HtmlParserRender.Render.Tags
                         throw new InvalidChildTypeException(string.Format(ExceptionMessage.InvalidSyntaxInChild + " at element {0}", tag.TagType.ToString()));
                 }
             }
+            else
+            {
+                Children.Add(element);
+            }
         }
     }
 }
